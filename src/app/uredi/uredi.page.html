@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Uredi belesku</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Uredi belesku</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Naslov</ion-label>
+        <ion-input [(ngModel)]="note.title" placeholder="Naslov"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Sadrzaj</ion-label>
+        <ion-textarea [(ngModel)]="note.content" placeholder="Sadržaj"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" color="success" (click)="updateNote()">Sacuvaj izmene</ion-button>
+      <ion-button expand="block" color="medium" (click)="cancelEdit()">Otkazi</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
